@@ -10,6 +10,7 @@ export default async function Page() {
  
   return (
     <section>
+      {/* instead of the actual iimage i wanted to display there name and when click it will redirect to the link of the image */}
       <div>Images</div>
       {images.blobs.map((image) => (
         <Image
