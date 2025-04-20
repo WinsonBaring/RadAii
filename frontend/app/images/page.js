@@ -12,15 +12,17 @@ export default async function Page() {
     <section>
       {/* instead of the actual iimage i wanted to display there name and when click it will redirect to the link of the image */}
       <div>Images</div>
-      {images.blobs.map((image) => (
+      {images.blobs.map((image,key) => (
+        <div key={key}>
+        {image.pathname}
         <Image
-          priority
           key={image.pathname}
           src={image.url}
           alt="Image"
           width={200}
           height={200}
         />
+        </div>
       ))}
     </section>
   );
